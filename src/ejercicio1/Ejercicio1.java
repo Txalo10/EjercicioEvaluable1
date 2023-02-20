@@ -10,7 +10,7 @@ public class Ejercicio1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		//*INICIO PROGRAMA
+		
 		String[] equipos = {"Almería", "Athletic de Bilbao", "Atlético de Madrid", "Barcelona", "Betis", "Cádiz", "Celta", "Elche", "Espanyol", "Getafe", "Girona", "Mallorca", "Osasuna", "Real Sociedad", "Rayo Vallecano", "Real Madrid", "Valladolid", "Sevilla", "Valencia", "Villarreal"};
 		String[] entrenadores = {"Rubi", "Ernesto Valverde", "Simeone", "Xavi", "Pellegrini", "Sergio González", "Carlos Carvahal", "Machín", "Diego Martínez", "Quique Sánchez Flores", "Míchel", "Javier Aguirre", "Jagoba Arrasate", "Imanol Alguacil", "Andoni Iraola", "Ancelotti", "Pacheta", "Sampaoli", "Voro", "Quique Setién"};
 		int [] posiciones = {15, 7, 4, 1, 5, 16, 14, 20, 17, 19, 11, 10, 9, 3, 6, 2, 13, 12, 18, 8};
