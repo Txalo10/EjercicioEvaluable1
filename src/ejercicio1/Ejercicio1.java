@@ -28,19 +28,20 @@ public class Ejercicio1 {
 		//fin variables busqueda posición
 		int opcion=0;
 		int cambios=0;
-		boolean modificado;
-		String modPosicion;
+
 		int newPosicion;
 	
 		do {
 			
-			System.out.println("Elige una opción: ");
-			System.out.println("1. Buscar un equipo");
-			System.out.println("2. Buscar un entrenador");
-			System.out.println("3. Ver la clasificación");
-			System.out.println("4. Modificar los datos");//dentro de este metemos las opciones de añadir, borrar, editar
-			System.out.println("5. Salir");
-			System.out.println("Marque el número que corresponda: ");
+			System.out.println("****************************************");
+			System.out.println("*****   Elige una opción:          *****");
+			System.out.println("*****   1. Buscar un equipo        *****");
+			System.out.println("*****   2. Buscar un entrenador    *****");
+			System.out.println("*****   3. Ver la clasificación    *****");
+			System.out.println("*****   4. Modificar los datos     *****");//dentro de este metemos las opciones de añadir, borrar, editar
+			System.out.println("*****   5. Salir                   *****");
+			System.out.println("****************************************");
+			System.out.println("*** Marque el número que corresponda:***");
 			
 			opcion=scanner.nextInt();
 			
