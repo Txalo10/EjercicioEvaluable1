@@ -18,15 +18,12 @@ public class Ejercicio1 {
 		int[] posicionesOrdenadas = new int[20];
 		Scanner scanner = new Scanner(System.in);
 
-		// variables búsqueda de posición
 		String equipo;
 		String entrenador;
 		int posicionPalabra, posicionNumero;
 		Scanner lector = new Scanner(System.in);
-		// fin variables busqueda posición
 		int opcion = 0;
 		int cambios = 0;
-
 		int newPosicion;
 
 		do {
@@ -36,8 +33,7 @@ public class Ejercicio1 {
 			System.out.println("*****    1. Buscar un equipo        *****");
 			System.out.println("*****    2. Buscar un entrenador    *****");
 			System.out.println("*****    3. Ver la clasificación    *****");
-			System.out.println("*****    4. Modificar los datos     *****");// dentro de este metemos las opciones de //
-																			// añadir, borrar, editar
+			System.out.println("*****    4. Modificar los datos     *****");
 			System.out.println("*****    5. Salir                   *****");
 			System.out.println("*****************************************");
 			System.out.println("***  Marca el número que corresponda: ***");
@@ -46,7 +42,7 @@ public class Ejercicio1 {
 			scanner.nextLine();
 
 			switch (opcion) {
-			case 1:
+			case 1: // buscar la posición de un equipo
 
 				System.out.println("Elige un equipo: ");
 				equipo = lector.nextLine();
@@ -56,12 +52,10 @@ public class Ejercicio1 {
 					System.out.println("Introduce un equipo de La Liga Santander.");
 				} else {
 					System.out.println("El " + equipo + " está en la posición " + posiciones[posicionPalabra] + "º.");
-
 				}
-
 				break;
 
-			case 2:
+			case 2: // buscar un entrenador
 				System.out.println("Elige un entrenador: ");
 				entrenador = lector.nextLine();
 
@@ -71,17 +65,11 @@ public class Ejercicio1 {
 				} else {
 					System.out.println(entrenador + " es el entrenador del " + equipos[posicionPalabra] + ", que va "
 							+ posiciones[posicionPalabra] + "º de la Liga Santander.");
-
 				}
 				break;
 
-			case 3:
+			case 3: // consultar la clasificación general
 				System.out.println("La Liga está así: ");
-				/*
-				 * hemos quitado el .sort porque no nos hace falta ordenar el array seguimos el
-				 * orden a través del bucle for entramos en el bucle en la posición 0, pero como
-				 * nunca vamos a buscar esa posición ponemos i+1
-				 */
 
 				for (int i = 0; i < posicionesOrdenadas.length; i++) {
 
@@ -89,10 +77,9 @@ public class Ejercicio1 {
 
 					System.out.println(i + 1 + "º - " + equipos[posicionNumero]);
 				}
-
 				break;
 
-			case 4:
+			case 4: // menú para realizar cambios
 				do {
 					System.out.println("**************************************************");
 					System.out.println("*****  ¿Qué cambios quieres hacer?           *****");
@@ -104,10 +91,10 @@ public class Ejercicio1 {
 					System.out.println("*****  Marca el número que corresponda:      *****");
 
 					cambios = scanner.nextInt();
-					scanner.nextLine();// siempre que tengamos un nextInt hay que meter un nextLine para que lo pare
+					scanner.nextLine();
 
 					switch (cambios) {
-					case 1:
+					case 1:// cambiar un entrenador
 
 						System.out.println("¿Qué entrenador cesado quieres cambiar?");
 						entrenador = scanner.nextLine();
@@ -117,15 +104,13 @@ public class Ejercicio1 {
 							System.out.println("Introduce un entrenador de La Liga Santander.");
 						} else {
 							System.out.println("¿Qué entrenador va a sustituirle?");
-							entrenador = scanner.nextLine();// utilizamos la misma variable todo el rato así optimizamos
-															// mucho mejor la memoria
+							entrenador = scanner.nextLine();
 							entrenadores[posicionPalabra] = entrenador;
 							System.out.println("Entrenador actualizado correctamente");
-
 						}
 						break;
 
-					case 2:
+					case 2:// cambiar de posición un equipo
 
 						System.out.println("¿Qué equipo quieres cambiar de posición?");
 						equipo = scanner.nextLine();
@@ -135,15 +120,13 @@ public class Ejercicio1 {
 							System.out.println("Introduce un equipo de La Liga Santander");
 						} else {
 							System.out.println("¿En qué nuevo puesto va el " + equipo + "?");
-							newPosicion = scanner.nextInt();// utilizamos la misma variable todo el rato así optimizamos
-															// mucho mejor la memoria
+							newPosicion = scanner.nextInt();
 							posiciones[posicionPalabra] = newPosicion;
 							System.out.println("Posición actualizada correctamente");
-
 						}
 						break;
 
-					case 3:
+					case 3:// cambiar los tres equipos descendidos
 						System.out.println("Estos son los equipos que descendieron el año pasado: ");
 						for (int i = 17; i < posicionesOrdenadas.length; i++) {
 
@@ -158,33 +141,31 @@ public class Ejercicio1 {
 							System.out.println("Introduce un equipo de La Liga Santander.");
 						} else {
 							System.out.println("¿Qué equipo va a sustituir a " + equipo + "?");
-							equipo = scanner.nextLine();// utilizamos la misma variable todo el rato así optimizamos
-														// mucho
-														// mejor la memoria
+							equipo = scanner.nextLine();
 							equipos[posicionPalabra] = equipo;
 							System.out.println("Equipo actualizado correctamente");
-
 						}
-						
+						break;
+
 					case 4:
 						break;
 
-					}// fin switch cambios
+					}
 				} while (opcion != 4);
+
 			case 5:
 				break;
 
 			default:
 				System.out.println("Introduce un número entre el 1 y el 5 para realizar una acción:");
 				break;
-			}// final del switch
-			break;
+			}
+
 		} while (opcion != 5);
 
 		System.out.println("Saliste del programa");
 		scanner.close();
 		lector.close();
-	}// final
-	
-	
+	}
+
 }
