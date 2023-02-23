@@ -15,7 +15,6 @@ public class Ejercicio1 {
 				"Jagoba Arrasate", "Imanol Alguacil", "Andoni Iraola", "Ancelotti", "Pacheta", "Sampaoli", "Voro",
 				"Quique Setién" };
 		int[] posiciones = { 15, 7, 4, 1, 5, 16, 14, 20, 17, 19, 11, 10, 9, 3, 6, 2, 13, 12, 18, 8 };
-		int[] posicionesOrdenadas = new int[20];
 		Scanner scanner = new Scanner(System.in);
 
 		String equipo;
@@ -71,7 +70,7 @@ public class Ejercicio1 {
 			case 3: // consultar la clasificación general
 				System.out.println("La Liga está así: ");
 
-				for (int i = 0; i < posicionesOrdenadas.length; i++) {
+				for (int i = 0; i < posiciones.length; i++) {
 
 					posicionNumero = Funcionalidades.buscarNumero(i + 1, posiciones);
 
@@ -128,7 +127,7 @@ public class Ejercicio1 {
 
 					case 3:// cambiar los tres equipos descendidos
 						System.out.println("Estos son los equipos que descendieron el año pasado: ");
-						for (int i = 17; i < posicionesOrdenadas.length; i++) {
+						for (int i = 17; i < posiciones.length; i++) {
 
 							posicionNumero = Funcionalidades.buscarNumero(i + 1, posiciones);
 							System.out.println(i + 1 + "º - " + equipos[posicionNumero]);
@@ -148,6 +147,7 @@ public class Ejercicio1 {
 						break;
 
 					case 4:
+						System.out.println("Saliste del programa");
 						break;
 
 					}
